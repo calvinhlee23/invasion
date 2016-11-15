@@ -1,0 +1,141 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+canvas {
+  background: url('image/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.game {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  justify-content: center;
+  width: 1000px;
+  text-align: center;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+}
+text {
+  font-size: 13px;
+}
+.text-field {
+  margin-bottom: 20px;
+}
+.game-view {
+  margin-left: 20px;
+}
+.tick {
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  vertical-align: top;
+}
+
+#battle-ground {
+  /*background-color: blue;*/
+}
+
+#hor-ruler{
+  background-color: #271a58;
+  margin-left: 10px;
+  color: white;
+  text-align: left;
+}
+
+#vert-ruler {
+  background-color: #271a58;
+  width: 15px;
+  color: white;
+}
+
+.hor-wrapper {
+  display: flex;
+}
+.hor-wrapper h4 {
+  margin-bottom: 10px;
+}
+.hor-wrapper section {
+  margin-top: 10px;
+  margin-left: 15px;
+  white-space: nowrap;
+  text-align: left;
+}
+.wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+}
+
+
+.info-board {
+  position: absolute;
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.info-board li {
+  margin-left: 20px;
+}
+
+a {
+  color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+#UI_Tab {
+  position: absolute;
+  display: block;
+}
+
+.success-fail {
+  text-decoration: none;
+  color: orange;
+}
+
+.success-fail:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.start:hover {
+  cursor: pointer;
+  background: orange;
+  color: black;
+  border: 5px solid #000;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  color: orange;
+  background: black;
+  border-radius: 10px;
+  border: 5px solid blue;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
