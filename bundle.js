@@ -123,7 +123,6 @@
 	          this.game.step();
 	
 	          button.addEventListener("click", function (e) {
-	            e.preventDefault();
 	            _this.game.executing = true;
 	            _this.game.setUp();
 	            _this.protocal();
@@ -198,6 +197,11 @@
 	  _createClass(Game, [{
 	    key: 'setUp',
 	    value: function setUp() {
+	      Object.keys(_image_constants2.default).forEach(function (name) {
+	        var image = new Image();
+	        image.src = _image_constants2.default[name];
+	        image.addEventListener("load", function () {});
+	      });
 	      this.lvlInd.textContent = this.level;
 	      this.bullInd.textContent = this.level * 2 + 2;
 	      this.tarInd.textContent = this.level * 2;
