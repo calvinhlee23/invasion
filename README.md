@@ -2,7 +2,7 @@
 
 [Live Link][liveLink]
 
-Invasion! is an old-fashioned arcade game that requires a little bit of mathematical reasoning
+Invasion! is a retro arcade game that requires a little bit of mathematical reasoning.
 
 ![screenshot]
 
