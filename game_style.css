@@ -1,7 +1,7 @@
 body {
   font-family: 'Press Start 2P', cursive;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
+  background: #1a1a1a;
+  color: antiquewhite;
 }
 canvas {
   background: url('image/background.jpg');
