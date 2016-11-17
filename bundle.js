@@ -201,8 +201,8 @@
 	      this.lvlInd.textContent = this.level;
 	      this.bullInd.textContent = this.level * 2 + 2;
 	      this.tarInd.textContent = this.level * 2;
-	      this.cannonBallSpeed = Math.random() * 20;
-	      if (this.cannonBallSpeed <= 9) {
+	      this.cannonBallSpeed = Math.random() * 25;
+	      if (this.cannonBallSpeed <= 10) {
 	        this.cannonBallSpeed += 10;
 	      }
 	      this.cannonBallSpeed = Math.floor(this.cannonBallSpeed);
@@ -289,18 +289,19 @@
 	        for (var j = 0; j < this.targets.length; j++) {
 	          var target = this.targets[j];
 	          if (cannonBall.onTarget(target)) {
-	            this.cannonBalls.splice(i, 1);
-	            this.targets.splice(j, 1);
-	            this.bullInd.textContent = parseInt(this.bullInd.textContent) - 1;
-	            this.tarInd.textContent = parseInt(this.tarInd.textContent) - 1;
 	            var image = new Image();
 	            image.src = _image_constants2.default["fire"];
 	            image.addEventListener("load", function () {
 	              _this3.fireAni.push({ image: image, pos: target.pos });
 	              window.setTimeout(function () {
 	                _this3.fireAni.splice(0, 1);
-	              }, 500);
+	              }, 400);
 	            });
+	
+	            this.cannonBalls.splice(i, 1);
+	            this.targets.splice(j, 1);
+	            this.bullInd.textContent = parseInt(this.bullInd.textContent) - 1;
+	            this.tarInd.textContent = parseInt(this.tarInd.textContent) - 1;
 	            return;
 	          }
 	        }
@@ -309,9 +310,9 @@
 	  }, {
 	    key: 'step',
 	    value: function step() {
-	      this.drawAllGameParts();
-	      this.checkIfBulletOnTarget();
 	      this.removeOutOfBoundsCannonBalls();
+	      this.checkIfBulletOnTarget();
+	      this.drawAllGameParts();
 	      this.updateStatus();
 	    }
 	  }, {

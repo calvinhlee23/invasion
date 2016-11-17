@@ -99,7 +99,7 @@ text {
 }
 
 a {
-  color: blue;
+  color: rgba(0, 192, 255, 0.73);
   margin: 0;
   padding: 0;
 }
