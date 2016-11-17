@@ -28,5 +28,5 @@ Keys:
 ## Features
 
 - Bullet acceleration/velocity calculation to ensure that a fired bullet will moved as expected per frame.
-- Loads images before each action to make sure that Canvas does not clear before loading.
+- Loads images before each action to prevent Canvas from clearing before loading.
 - Utilizes the keymaster library to get user input.
