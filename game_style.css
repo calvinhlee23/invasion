@@ -2,6 +2,8 @@ body {
   font-family: 'Press Start 2P', cursive;
   background: #1a1a1a;
   color: antiquewhite;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 canvas {
   background: url('image/background.jpg');
