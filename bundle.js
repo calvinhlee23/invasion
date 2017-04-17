@@ -230,7 +230,7 @@
 	    value: function fire() {
 	      if (this.numCannonBallsLeft > 0) {
 	        this.numCannonBallsLeft -= 1;
-	        var cannonBall = new _cannon_ball2.default({ ctx: this.ctx, current_height: this.drone.pos[1],
+	        var cannonBall = new _cannon_ball2.default({ ctx: this.ctx, drone_pos: this.drone.pos,
 	          speed: this.cannonBallSpeed });
 	        this.cannonBalls.push(cannonBall);
 	      }
@@ -412,6 +412,7 @@
 	    var _this = _possibleConstructorReturn(this, (Drone.__proto__ || Object.getPrototypeOf(Drone)).call(this, args));
 	
 	    _this.type = "DRONE";
+	    window.dronePos = _this.pos;
 	    return _this;
 	  }
 	
@@ -496,7 +497,7 @@
 	
 	    _this.ctx = args.ctx;
 	    _this.type = "CANNON_BALL";
-	    _this.pos = [35, args.current_height + 30];
+	    _this.pos = [args.drone_pos[0] + 35, args.drone_pos[1] + 30];
 	    _this.horizontal_vel = args.speed;
 	    // 60 frames per sec, change in velocity reaches 9.81 after a sec.
 	    _this.vertical_vel = 0;
