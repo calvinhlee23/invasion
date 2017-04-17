@@ -57,8 +57,10 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var GAME_KEYS = {
-	  "up": [0, -5.3],
-	  "down": [0, 5.3]
+	  "up": [0, -7.3],
+	  "down": [0, 7.3],
+	  "left": [-7.3, 0],
+	  "right": [7.3, 0]
 	};
 	
 	document.addEventListener("DOMContentLoaded", function () {
@@ -416,8 +418,10 @@
 	  _createClass(Drone, [{
 	    key: 'move',
 	    value: function move(vel) {
-	      // the cannon will only move in vertical direction
-	      this.pos[1] += vel[1];
+	      var x = this.pos[0] + vel[0];
+	      var y = this.pos[1] + vel[1];
+	      if (x > 0 && x < 800) this.pos[0] = x;
+	      if (y > 0 && y < 430) this.pos[1] = y;
 	    }
 	  }]);
 	

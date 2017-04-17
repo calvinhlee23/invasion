@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invasion!</title>
+    <script src="./bundle.js" charset="utf-8"></script>
+    <script src="./lib/keymaster.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./game_style.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class = "game">
+      <section class= "text-field">
+        <h4>Aliens have invaded planet Earth!</h4>
+        <text>Use basic physics to destroy the enemy! <br/>
+              (scale unit:100m)</text>
+
+      </section>
+      <ul class = "info-board">
+        <li>Speed:<a id= "speed"></a></li>
+        <li id = "gravity">Gravity:9.8m/s2 </li>
+        <li>Level:<a id = "level"></a></li>
+        <li >Bullets:<a id = "numCannonBallsLeft"></a></li>
+        <li>Targets:<a  id = "remainingTargets"></a></li>
+      </ul>
+      <div class = "game-view">
+        <br/>
+        <div class = "hor-wrapper">
+        <div class = "wrapper">
+          <table width= 10 height = 500  style='font-family: monospace;'id = "vert-ruler"></table>
+          <div id = "UI_Tab"></div>
+          <canvas id = "battle-ground" width = 900 height= 500></canvas>
+        </div>
+        <section>
+          <h4>Control</h4>
+          <p>Up: <span class="glyphicon glyphicon-arrow-up"></span></p>
+          <p>Down: <span class="glyphicon glyphicon-arrow-down"></span></p>
+          <p>Fire!: space</p>
+        </section>
+      </div>
+          <table width= 900 style='font-family: monospace;' id = "hor-ruler"></table> <br/>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+  // create rulers
+  var hor_ruler = document.getElementById("hor-ruler");
+    for (var i = 0; i < 9; i++) {
+      var tick = document.createElement('td');
+      tick.className += 'tick';
+      hor_ruler.appendChild(tick);
+      var num = document.createElement('td');
+      num.textContent = `${i}`;
+      hor_ruler.appendChild(num);
+    }
+  var vert_ruler = document.getElementById('vert-ruler');
+    for (var i = 0; i < 5; i++) {
+      var tick = document.createElement('tr');
+      tick.className += 'tick';
+      vert_ruler.appendChild(tick);
+      var num = document.createElement('td');
+      num.textContent = `${5-i}`;
+      vert_ruler.appendChild(num);
+    }
+  </script>
+</html>
