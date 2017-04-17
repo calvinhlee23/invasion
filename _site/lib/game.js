@@ -53,7 +53,7 @@ class Game {
   fire () {
     if (this.numCannonBallsLeft > 0) {
       this.numCannonBallsLeft -= 1;
-      var cannonBall = new CannonBall({ctx: this.ctx, current_height: this.drone.pos[1],
+      var cannonBall = new CannonBall({ctx: this.ctx, drone_pos: this.drone.pos,
                                        speed: this.cannonBallSpeed});
       this.cannonBalls.push(cannonBall);
     }

@@ -9,7 +9,6 @@ class Drone extends GameParts {
   }
 
   move(vel) {
-    // the cannon will only move in vertical direction
     var x = this.pos[0] + vel[0];
     var y = this.pos[1] + vel[1];
     if (x > 0 && x < 800) this.pos[0] = x;
